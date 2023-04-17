@@ -16,7 +16,8 @@
 </head>
 
 <body>
-    {{$comics -> title}}
+   
+    test3
 </body>
 
 </html>
