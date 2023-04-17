@@ -11,7 +11,6 @@ use resources\views\create.blade.php;
 
   <div class="container">
     <form action="">
-      ...
     </form>
   </div>
 
