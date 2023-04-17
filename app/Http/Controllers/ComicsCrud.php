@@ -15,7 +15,9 @@ class ComicsCrud extends Controller
      */
     public function index()
     {
-        //
+        $comics = Comics::all();
+
+        return view('comics.index', compact('comics'));
     }
 
     /**
@@ -25,7 +27,7 @@ class ComicsCrud extends Controller
      */
     public function create()
     {
-        //
+        return view('comics.index');
     }
 
     /**
@@ -45,9 +47,9 @@ class ComicsCrud extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($comics)
     {
-        //
+        return view('comics.index', compact('comics'));
     }
 
     /**
