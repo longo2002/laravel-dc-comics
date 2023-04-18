@@ -81,9 +81,24 @@ class ComicsCrud extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+
+     public function destroy(Comics $comics)
     {
-        //
+
+        // dd($pasta);
+        $pasta->delete();
+
+        return to_route('comics.index');
+    }
+
+    public function destroyAll()
+    {
+        $comics = Comics::all();
+        $ids = $comics->pluck('id');
+
+        Comics::destroy($ids);
+
+        return to_route('comics.index');
     }
 
 }
